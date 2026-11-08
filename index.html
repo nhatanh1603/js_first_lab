@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý sinh viên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Quản Lý Danh Sách Sinh Viên</h2>
+
+    <div class="bo-cuc-chinh">
+      <div class="cot-chinh">
+        <div class="khung">
+          <div class="form-nhap">
+            <input id="ten" placeholder="Tên">
+            <input id="lop" placeholder="Lớp">
+            <input id="diem" type="number" step="0.1" placeholder="Điểm">
+            <button id="nutThem">Thêm sinh viên</button>
+          </div>
+        </div>
+
+        <div class="khung">
+          <h3>Danh sách sinh viên & Xếp loại (Câu 3)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Tên</th>
+                <th>Lớp</th>
+                <th>Điểm</th>
+                <th>Xếp loại</th>
+              </tr>
+            </thead>
+            <tbody id="bangSinhVien"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cot-phu">
+        <div class="khung">
+          <p><b>1. Điểm trung bình cả danh sách:</b> <span id="kqDiemTB"></span></p>
+          <p><b>2. Danh sách tên (A-Z):</b> <span id="kqTen"></span></p>
+          <p><b>4. Nhóm sinh viên theo lớp:</b></p>
+          <div id="kqNhomLop"></div>
+        </div>
+
+        <div class="khung">
+          <div class="hang-top">
+            <b>5. Lấy Top N sinh viên cao điểm nhất:</b>
+            <input id="soN" type="number" value="3" min="1" class="o-nho">
+          </div>
+          <ul id="kqTop"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
